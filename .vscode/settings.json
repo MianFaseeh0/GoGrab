@@ -1,0 +1,6 @@
+{
+  "dart.flutterSdkPath": "/Users/mianfaseeh/flutter/flutter-3.5",
+  "terminal.integrated.env.osx": {
+    "PATH": "/Users/mianfaseeh/flutter/flutter-3.5/bin:${env:PATH}"
+  }
+}
