@@ -1,18 +1,18 @@
-# gograb
+# GoGrab (Flutter port of the HTML prototype)
 
-A new Flutter project.
+Screens: login, face picker, hub, name crew, invite, join (code + shuffle search),
+home (Crew / Runs / Me tabs), crew (Runs / Members / Me), add-run sheet,
+store-type picker (~49 types), time wheel, ranked assignee strip, edit-run screen.
 
-## Getting Started
+## Run
+    flutter create . --platforms=android,ios,web   # one-time: generates platform folders
+    flutter pub get
+    flutter run
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# GoGrab
+## Notes
+- `lib/core/svg_data.dart` is generated from the HTML: `python3 tools/gen_svg_data.py`
+  (edit the path at the top of the script to point at the HTML file).
+- Fonts (Bricolage Grotesque, DM Mono) load through `google_fonts` at runtime, so the first
+  launch needs internet. To work offline, add the .ttf files as assets and use `fontFamily`.
+- Not compiled or run in the sandbox that produced it (no Flutter/Dart toolchain there).
+  Run `flutter analyze` first and fix any small typos it reports.
